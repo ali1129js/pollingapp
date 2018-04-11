@@ -2,29 +2,31 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-11T14:13:42+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-11T16:39:40+02:00
+ * @Last modified time: 2018-04-11T22:04:26+02:00
  */
 
 
 
 import React, { Component } from 'react'
-import io from 'socket.io-client'
-import './App.css';
+import './App.css'
+import openSocket from 'socket.io-client';
 
 class App extends Component {
-  constructor(){
-    super()
-    this.state = {
-    }
-    
+  constructor(props){
+    super(props)
+      this.state = {}
+
   }
-  //  for emitting a socket.io event
+  /*The first and most important method you will encounter while working with Socket.IO is on(). The on() method takes two arguments: the name of the event, in this case “connection” and a callback which will be executed after every connection event. on() is nothing more than a core Node.js method tied to the EventEmitter class.
+
+    The connection event returns a socket object which will be passed to the callback function. By using said socket you will be able to send data back to the client in real time.*/
   componentWillMount(){
-    this.socket = io('http://localhost:3000')
+    this.socket = openSocket('http://localhost:3000')
     this.socket.on('connect',this.connect)
   }
   connect(){
-    console.log("connected" + this.socket.id)
+    alert("connected")
+    console.log(socket)
   }
 
 
