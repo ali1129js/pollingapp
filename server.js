@@ -2,12 +2,13 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-11T13:12:48+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-12T12:01:31+02:00
+ * @Last modified time: 2018-04-12T13:58:42+02:00
  */
  const express = require('express')
  const app = express()
 
  const connections = []
+ const title = 'untitled Presentation'
  app.use(express.static('./socket-client/public'))
  const port = 3000
 
@@ -19,6 +20,9 @@
      connections.splice(connections.indexOf(socket),1)
      socket.disconnect()
      console.log('Disconnected: %s sockets remaining',connections.length)
+   })
+   socket.emit('welcome', {
+     title:title
    })
    connections.push(socket)
    console.log('connected: %s sockets connected',connections.length)
