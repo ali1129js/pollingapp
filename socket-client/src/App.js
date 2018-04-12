@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-11T14:13:42+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-12T13:55:07+02:00
+ * @Last modified time: 2018-04-12T18:29:05+02:00
  */
 
 
@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header title={this.state.title} />
-
+        
       </div>
     );
   }
