@@ -1,8 +1,8 @@
 /**
  * @Author: Ali Ismail
  * @Date:   2018-04-12T13:47:30+02:00
- * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-12T18:16:40+02:00
+ * @Last modified by:   Ali
+ * @Last modified time: 2018-05-11T22:05:50+02:00
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -26,8 +26,6 @@ const routes = (
 
 
 
-Router.run(routes,function(handler){
   ReactDOM.render(<App />, document.getElementById('root'))
 
-})
 registerServiceWorker()
