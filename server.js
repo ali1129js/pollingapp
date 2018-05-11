@@ -1,15 +1,18 @@
 /**
  * @Author: Ali Ismail
  * @Date:   2018-04-11T13:12:48+02:00
- * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-12T13:58:42+02:00
+ * @Last modified by:   Ali
+ * @Last modified time: 2018-05-11T12:58:06+02:00
  */
  const express = require('express')
  const app = express()
 
  const connections = []
  const title = 'untitled Presentation'
+
  app.use(express.static('./socket-client/public'))
+ app.use(express.static('./node_modules/bootstrap/dist'))
+
  const port = 3000
 
  const server = app.listen(port)
